@@ -1,5 +1,5 @@
-MYSQL_HOST: mysql-{{ ENVIRONMENT }}.daws-82s.site
-APP_LOCATION: /app
-COMPONENT: backend
+MYSQL_HOST: "mysql-{{ ENVIRONMENT }}.daws-82s.site"
 MYSQL_USER: root
 MYSQL_PASSWORD: ExpenseApp1
+APP_LOCATION: /app
+COMPONENT: backend

@@ -1,15 +1,21 @@
-- name: removing existing directory
+- name: remove existing directory
+  tags: 
+  - deployment
   ansible.builtin.file:
-   path: "{{ APP_LOCATION }}" #backend folder is /app, frontend /usr/share/nginx/html
-   state: absent
+    path: "{{ APP_LOCAION }}" # backend folder is /app, frontend /usr/share/nginx/html
+    state: absent
 
-- name: creating directory
+- name: create app directory
+  tags: 
+  - deployment
   ansible.builtin.file:
-   path: "{{ APP_LOCATION }}" #backend folder is /app, frontend /usr/share/nginx/html
-   state: directory
+    path: "{{ APP_LOCAION }}" # backend folder is /app, frontend /usr/share/nginx/html
+    state: directory
 
 - name: download app code
+  tags: 
+  - deployment
   ansible.builtin.unarchive:
-   src: "https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{ COMPONENT }}-v2.zip"
-   dest: "{{ APP_LOCATION }}"
-   remote_src: yes
+    src: "https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{ COMPONENT }}-v2.zip"
+    dest: "{{ APP_LOCAION }}"
+    remote_src: yes
