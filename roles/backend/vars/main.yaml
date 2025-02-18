@@ -1,3 +1,4 @@
+MYSQL_HOST: mysql-{{ ENVIRONMENT }}.daws-82s.site
 APP_LOCATION: /app
 COMPONENT: backend
 MYSQL_USER: root
