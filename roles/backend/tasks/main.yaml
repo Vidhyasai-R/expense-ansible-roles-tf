@@ -62,7 +62,7 @@
     name: all
     login_user: root
     login_password: ExpenseApp1
-    login_host: mysql.daws-82s.site
+    login_host: "{{ MYSQL_HOST }}"
     target: /app/schema/backend.sql
 
 - name: Daemon reload and Restart service
