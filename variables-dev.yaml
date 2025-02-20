@@ -1,1 +1,1 @@
-MYSQL_HOST: "mysql-{{ ENVIRONMENT }}.daws-82s.site"
+MYSQL_HOST: mysql-dev.daws-82s.site
